@@ -4,6 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
+    base: '/guild-hp/',
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
