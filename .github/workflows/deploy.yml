@@ -52,3 +52,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Notify Slack on Success
+        if: success()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"🚀 GLOBIS Tech Guild HP のデプロイが完了しました！\n URL: https://globis-tech-guild.github.io/\n ブランチ: ${{ github.ref_name }}\n コミット: ${{ github.sha }}"}' \
+            ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Notify Slack on Failure
+        if: failure()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"❌ GLOBIS Tech Guild HP のデプロイに失敗しました\n ブランチ: ${{ github.ref_name }}\n コミット: ${{ github.sha }}\n 詳細: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+            ${{ secrets.SLACK_WEBHOOK_URL }}
