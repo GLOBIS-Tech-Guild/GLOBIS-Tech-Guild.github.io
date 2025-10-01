@@ -1,6 +1,23 @@
+import { type MouseEvent } from "react";
 import DevelopersGuildIcon from "../assets/DevelopersGuild.svg";
 
 export function Footer() {
+  const handleSmoothScroll = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      const headerOffset = 60; // ヘッダーの高さ分のオフセット
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <footer className="border-t border-border/40 bg-gradient-to-b from-muted/20 to-muted/40 relative overflow-hidden">
       {/* Background decoration */}
@@ -31,9 +48,10 @@ export function Footer() {
                 { href: "#activities", label: "Activities" }
               ].map((item) => (
                 <li key={item.href}>
-                  <a 
-                    href={item.href} 
-                    className="text-muted-foreground hover:text-primary transition-all duration-200 hover:translate-x-1 inline-block"
+                  <a
+                    href={item.href}
+                    onClick={(e) => handleSmoothScroll(e, item.href)}
+                    className="text-muted-foreground hover:text-primary transition-all duration-200 hover:translate-x-1 inline-block cursor-pointer"
                   >
                     {item.label}
                   </a>
