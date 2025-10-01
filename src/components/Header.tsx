@@ -34,7 +34,7 @@ export function Header() {
                 <img src={DevelopersGuildIcon} alt="GLOBIS Tech Guild" className="h-8 w-8" />
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur opacity-75"></div>
               </div>
-              <span className="hidden sm:block font-semibold text-lg bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+              <span className="font-semibold text-lg bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
                 GLOBIS Tech Guild
               </span>
             </a>
