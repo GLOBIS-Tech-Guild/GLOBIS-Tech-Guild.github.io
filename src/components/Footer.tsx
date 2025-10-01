@@ -1,4 +1,4 @@
-import { Code2 } from "lucide-react";
+import DevelopersGuildIcon from "../assets/DevelopersGuild.svg";
 
 export function Footer() {
   return (
@@ -11,7 +11,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <div className="relative">
-                <Code2 className="h-7 w-7 text-primary" />
+                <img src={DevelopersGuildIcon} alt="GLOBIS Tech Guild" className="h-7 w-7" />
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur opacity-75"></div>
               </div>
               <span className="font-semibold text-lg bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">

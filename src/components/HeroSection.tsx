@@ -1,6 +1,5 @@
-import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { ArrowRight, Users, Target, Rocket, Sparkles } from "lucide-react";
+import { Users, Rocket, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function HeroSection() {
@@ -61,14 +60,6 @@ export function HeroSection() {
                   alt="Modern tech workspace"
                   className="rounded-3xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover border border-white/20"
                 />
-                
-                {/* Floating badges */}
-                <div className="absolute -top-6 -left-6 p-4 bg-gradient-to-br from-primary/20 to-primary/10 backdrop-blur-xl rounded-2xl shadow-xl border border-primary/30">
-                  <Users className="w-6 h-6 text-primary" />
-                </div>
-                <div className="absolute -bottom-6 -right-6 p-4 bg-gradient-to-br from-secondary/20 to-secondary/10 backdrop-blur-xl rounded-2xl shadow-xl border border-secondary/30">
-                  <Rocket className="w-6 h-6 text-secondary" />
-                </div>
               </div>
             </div>
           </div>

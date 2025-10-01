@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
-import { Code2, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import DevelopersGuildIcon from "../assets/DevelopersGuild.svg";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ export function Header() {
           <div className="flex items-center">
             <a className="flex items-center space-x-3" href="/">
               <div className="relative">
-                <Code2 className="h-8 w-8 text-primary" />
+                <img src={DevelopersGuildIcon} alt="GLOBIS Tech Guild" className="h-8 w-8" />
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur opacity-75"></div>
               </div>
               <span className="hidden sm:block font-semibold text-lg bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
