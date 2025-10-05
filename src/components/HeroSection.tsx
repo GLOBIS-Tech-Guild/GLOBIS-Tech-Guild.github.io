@@ -1,6 +1,7 @@
 import { Badge } from "./ui/badge";
 import { Users, Rocket, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import HeroSectionimg from "../assets/HeroSection.svg";
 
 export function HeroSection() {
   return (
@@ -21,7 +22,7 @@ export function HeroSection() {
               {/* Main image */}
               <div className="relative">
                 <ImageWithFallback
-                  src="https://katayama502.github.io/GLOBIS-Tech-Guild_img/images/GLOBIS%20Tech%20Guild.png"
+                  src={HeroSectionimg}
                   alt="Modern tech workspace"
                   className="rounded-3xl shadow-2xl w-full aspect-[16/9] object-cover border border-white/20"
                 />
