@@ -6,7 +6,7 @@ import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-background via-primary/[0.02] to-secondary/[0.03]">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#04191d] via-[#062b32] to-[#0b3d45] text-foreground">
       <Header />
       <main className="flex-1">
         <HeroSection />
