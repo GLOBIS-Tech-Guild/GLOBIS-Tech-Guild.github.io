@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Target, Rocket, Users, MessageSquare } from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import HeroSectionimg from "../assets/HeroSection.svg";
 
 export function AboutSection() {
   const goals = [
@@ -8,95 +10,103 @@ export function AboutSection() {
       icon: Target,
       title: "コミュニティの価値",
       subtitle: "MBA × エンジニアの知見共有",
-      items: [
-        "経営×創造者の情報交換",
-        "最新情報が飛び交う場"
-      ],
-      color: "text-blue-600",
-      gradient: "from-blue-500/10 to-blue-600/5",
-      bg: "bg-blue-500/5"
+      items: ["経営×創造者の情報交換", "最新情報が飛び交う場"],
+      accent: "from-sky-400/60 via-sky-300/40 to-transparent"
     },
     {
       icon: Rocket,
       title: "目指すもの",
       subtitle: "継続的な成長とイノベーション",
-      items: [
-        "プロダクト開発スキルの向上",
-        "持続可能な開発体制"
-      ],
-      color: "text-emerald-600",
-      gradient: "from-emerald-500/10 to-emerald-600/5",
-      bg: "bg-emerald-500/5"
+      items: ["プロダクト開発スキルの向上", "持続可能な開発体制"],
+      accent: "from-emerald-400/60 via-emerald-300/40 to-transparent"
     }
   ];
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-primary/[0.02] via-background to-secondary/[0.02] relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
-      <div className="absolute top-40 left-20 w-64 h-64 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-40 right-20 w-80 h-80 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-3xl"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-6 mb-20">
-          <Badge variant="outline" className="w-fit mx-auto px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/30 backdrop-blur-sm">
-            <Users className="w-4 h-4 mr-2 text-primary" />
-            About Us
-          </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary via-foreground to-secondary bg-clip-text text-transparent">
-            コミュニティの目的
-          </h2>
-          <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            経営と技術の両面を理解するエンジニアが集まり、持続可能な成長戦略を共に考えるコミュニティです。
-          </p>
+    <section id="about" className="relative py-24 text-slate-100 overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <ImageWithFallback
+          src={HeroSectionimg}
+          alt="Ambient workspace texture"
+          className="h-full w-full object-cover opacity-30"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-md" />
+        <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-slate-950 via-slate-950/80 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center">
+          <div className="lg:w-2/5 space-y-6">
+            <Badge className="w-fit bg-white/10 text-slate-100 border-white/20 backdrop-blur">
+              <Users className="w-4 h-4 mr-2 text-sky-300" />
+              About Us
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
+              コミュニティの目的
+            </h2>
+            <p className="text-base md:text-lg text-slate-300 leading-relaxed">
+              経営と技術の両面を理解するエンジニアが集まり、持続可能な成長戦略を共に考えるコミュニティです。
+              ビジュアルのトーンを揃えた落ち着いた空間で、深いインサイトと実践知を共有します。
+            </p>
+          </div>
+
+          <div className="lg:w-3/5 grid gap-6 md:grid-cols-2">
+            {goals.map((goal, index) => {
+              const Icon = goal.icon;
+              return (
+                <Card
+                  key={index}
+                  className="relative overflow-hidden border border-white/10 bg-white/5 text-slate-100 backdrop-blur-xl"
+                >
+                  <div className={`absolute inset-x-6 top-0 h-px bg-gradient-to-r ${goal.accent}`} />
+                  <CardHeader className="space-y-4 pb-0">
+                    <div className="flex items-center gap-4">
+                      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10">
+                        <Icon className="h-6 w-6 text-white" />
+                      </span>
+                      <div>
+                        <CardTitle className="text-lg font-medium">{goal.title}</CardTitle>
+                        <CardDescription className="text-slate-300 text-sm">
+                          {goal.subtitle}
+                        </CardDescription>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pt-6">
+                    <ul className="space-y-4">
+                      {goal.items.map((item, itemIndex) => (
+                        <li key={itemIndex} className="flex items-start gap-3 text-sm text-slate-200">
+                          <div className="mt-1 h-2 w-2 rounded-full bg-white/60" />
+                          <span className="leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 mb-20">
-          {goals.map((goal, index) => {
-            const Icon = goal.icon;
-            return (
-              <Card key={index} className="border-0 shadow-xl bg-gradient-to-br from-card via-card to-muted/10 hover:shadow-2xl transition-all duration-300 group border border-border/20 backdrop-blur-sm">
-                <CardHeader className="text-center space-y-6 pb-6">
-                  <div className={`w-20 h-20 mx-auto bg-gradient-to-br ${goal.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 border border-white/20`}>
-                    <Icon className={`w-10 h-10 ${goal.color}`} />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl font-bold mb-2">{goal.title}</CardTitle>
-                    <CardDescription className="text-base font-medium text-foreground/70">
-                      {goal.subtitle}
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4 px-8 pb-8">
-                  <ul className="space-y-4">
-                    {goal.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-4 group">
-                        <div className={`w-3 h-3 mt-1.5 ${goal.bg} border-2 border-current rounded-full flex-shrink-0 ${goal.color}`} />
-                        <span className="text-foreground/80 leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
+        <div className="mt-16">
+          <Card className="relative overflow-hidden border border-white/10 bg-white/5 text-slate-100 backdrop-blur-xl">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" />
+            <div className="absolute -top-20 right-16 h-48 w-48 rounded-full bg-sky-400/10 blur-3xl" />
+            <div className="absolute -bottom-24 left-10 h-56 w-56 rounded-full bg-emerald-400/10 blur-3xl" />
 
-        <div className="max-w-4xl mx-auto">
-          <Card className="border-0 bg-gradient-to-r from-primary via-primary/95 to-secondary text-primary-foreground shadow-2xl overflow-hidden relative">
-            {/* Background pattern */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent"></div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-3xl transform translate-x-32 -translate-y-32"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-white/5 to-transparent rounded-full blur-2xl transform -translate-x-24 translate-y-24"></div>
-            
-            <CardContent className="py-12 px-8 text-center relative z-10">
-              <div className="w-16 h-16 mx-auto mb-6 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                <MessageSquare className="w-8 h-8" />
+            <CardContent className="relative z-10 flex flex-col items-center gap-6 py-12 text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10">
+                <MessageSquare className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">情報交換のハブ</h3>
-              <p className="text-primary-foreground/90 text-lg leading-relaxed max-w-3xl mx-auto">
-                技術トレンド、ビジネス戦略、プロダクト開発など、エンジニアとして必要な情報を共有し、共に成長していく場所です。
-              </p>
+              <div className="space-y-3 max-w-3xl">
+                <h3 className="text-2xl font-semibold">情報交換のハブ</h3>
+                <p className="text-slate-300 leading-relaxed">
+                  技術トレンド、ビジネス戦略、プロダクト開発など、エンジニアとして必要な情報を共有し、
+                  共に成長していく場所です。知見が交差する瞬間を大切にしながら、価値の高いコラボレーションを生み出します。
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>
