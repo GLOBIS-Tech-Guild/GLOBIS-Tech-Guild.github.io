@@ -31,38 +31,43 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-primary/[0.02] via-background to-secondary/[0.02] relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
-      <div className="absolute top-40 left-20 w-64 h-64 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-40 right-20 w-80 h-80 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-3xl"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-6 mb-20">
-          <Badge variant="outline" className="w-fit mx-auto px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/30 backdrop-blur-sm">
-            <Users className="w-4 h-4 mr-2 text-primary" />
+    <section id="about" className="relative overflow-hidden py-32">
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent" />
+        <div className="absolute -left-20 top-32 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
+        <div className="absolute -right-32 bottom-20 h-[22rem] w-[22rem] rounded-full bg-purple-500/10 blur-3xl" />
+      </div>
+
+      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-20 text-center">
+          <Badge className="mx-auto w-fit border-0 bg-white/10 px-4 py-2 text-cyan-200 backdrop-blur">
+            <Users className="mr-2 h-4 w-4 text-cyan-300" />
             About Us
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary via-foreground to-secondary bg-clip-text text-transparent">
+          <h2 className="mt-6 text-3xl font-semibold tracking-tight text-white md:text-4xl">
             コミュニティの目的
           </h2>
-          <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
+          <p className="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-slate-200/80">
             経営と技術の両面を理解するエンジニアが集まり、持続可能な成長戦略を共に考えるコミュニティです。
+            UI/UXの洗練と事業インパクトを両立させるための知見がここに集まります。
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 mb-20">
+        <div className="mb-20 grid gap-8 md:grid-cols-2">
           {goals.map((goal, index) => {
             const Icon = goal.icon;
             return (
-              <Card key={index} className="border-0 shadow-xl bg-gradient-to-br from-card via-card to-muted/10 hover:shadow-2xl transition-all duration-300 group border border-border/20 backdrop-blur-sm">
-                <CardHeader className="text-center space-y-6 pb-6">
-                  <div className={`w-20 h-20 mx-auto bg-gradient-to-br ${goal.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 border border-white/20`}>
-                    <Icon className={`w-10 h-10 ${goal.color}`} />
+              <Card
+                key={index}
+                className="group border border-white/10 bg-white/[0.04] shadow-[0_25px_45px_-30px_rgba(15,118,230,0.55)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/60 hover:bg-white/[0.06]"
+              >
+                <CardHeader className="space-y-6 pb-6 text-center">
+                  <div className={`mx-auto flex h-20 w-20 items-center justify-center rounded-2xl border border-white/20 bg-gradient-to-br ${goal.gradient} shadow-lg transition-transform duration-300 group-hover:scale-105`}>
+                    <Icon className={`h-10 w-10 ${goal.color}`} />
                   </div>
                   <div>
-                    <CardTitle className="text-xl font-bold mb-2">{goal.title}</CardTitle>
-                    <CardDescription className="text-base font-medium text-foreground/70">
+                    <CardTitle className="mb-2 text-xl font-semibold text-white">{goal.title}</CardTitle>
+                    <CardDescription className="text-base font-medium text-slate-200/70">
                       {goal.subtitle}
                     </CardDescription>
                   </div>
@@ -71,8 +76,8 @@ export function AboutSection() {
                   <ul className="space-y-4">
                     {goal.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start gap-4 group">
-                        <div className={`w-3 h-3 mt-1.5 ${goal.bg} border-2 border-current rounded-full flex-shrink-0 ${goal.color}`} />
-                        <span className="text-foreground/80 leading-relaxed">{item}</span>
+                        <div className={`mt-1.5 h-3 w-3 flex-shrink-0 rounded-full border-2 border-current ${goal.bg} ${goal.color}`} />
+                        <span className="leading-relaxed text-slate-200/80">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -82,20 +87,21 @@ export function AboutSection() {
           })}
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Card className="border-0 bg-gradient-to-r from-primary via-primary/95 to-secondary text-primary-foreground shadow-2xl overflow-hidden relative">
+        <div className="mx-auto max-w-4xl">
+          <Card className="relative overflow-hidden border border-cyan-300/20 bg-gradient-to-r from-cyan-500/20 via-blue-600/25 to-purple-600/20 text-white shadow-[0_30px_60px_-35px_rgba(6,182,212,0.65)]">
             {/* Background pattern */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent"></div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-3xl transform translate-x-32 -translate-y-32"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-white/5 to-transparent rounded-full blur-2xl transform -translate-x-24 translate-y-24"></div>
-            
-            <CardContent className="py-12 px-8 text-center relative z-10">
-              <div className="w-16 h-16 mx-auto mb-6 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                <MessageSquare className="w-8 h-8" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.35),transparent_65%)]" />
+            <div className="pointer-events-none absolute -right-24 top-0 h-64 w-64 rounded-full bg-purple-400/30 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-20 left-0 h-56 w-56 rounded-full bg-cyan-300/25 blur-3xl" />
+
+            <CardContent className="relative z-10 px-8 py-12 text-center">
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/20 bg-white/10 backdrop-blur">
+                <MessageSquare className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">情報交換のハブ</h3>
-              <p className="text-primary-foreground/90 text-lg leading-relaxed max-w-3xl mx-auto">
+              <h3 className="text-2xl font-semibold">情報交換のハブ</h3>
+              <p className="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-slate-100">
                 技術トレンド、ビジネス戦略、プロダクト開発など、エンジニアとして必要な情報を共有し、共に成長していく場所です。
+                オンライン・オフライン双方でのコラボレーションを通じて、インサイトをすぐにプロダクトへ落とし込みます。
               </p>
             </CardContent>
           </Card>

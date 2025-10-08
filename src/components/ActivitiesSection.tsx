@@ -67,33 +67,35 @@ export function ActivitiesSection() {
   ];
 
   return (
-    <section id="activities" className="py-24 relative overflow-hidden">
+    <section id="activities" className="relative overflow-hidden py-32">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/[0.02] to-background"></div>
-      <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-40 left-20 w-96 h-96 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center space-y-6 mb-20">
-          <Badge variant="outline" className="w-fit mx-auto px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/30 backdrop-blur-sm">
-            <Calendar className="w-4 h-4 mr-2 text-primary" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(14,165,233,0.08),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(160deg,rgba(12,74,110,0.35)_0%,rgba(76,29,149,0.25)_45%,transparent_95%)]" />
+      <div className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="absolute -right-16 bottom-0 h-96 w-96 rounded-full bg-purple-500/15 blur-3xl" />
+
+      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-20 text-center">
+          <Badge className="mx-auto w-fit border-0 bg-white/10 px-4 py-2 text-cyan-200 backdrop-blur">
+            <Calendar className="mr-2 h-4 w-4 text-cyan-300" />
             Activities
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary via-foreground to-secondary bg-clip-text text-transparent">
+          <h2 className="mt-6 text-3xl font-semibold tracking-tight text-white md:text-4xl">
             活動内容
           </h2>
-          <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
+          <p className="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-slate-200/80">
             多様なイベントと情報共有を通じて、エンジニアのスキルアップとネットワーク構築をサポートします。
+            深い洞察とスマートなアウトプットを引き出すプログラムが揃っています。
           </p>
         </div>
 
         {/* Information Sharing Section */}
         <div className="mb-24">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
+          <div className="mb-12 text-center">
+            <h3 className="text-2xl font-semibold text-white">
               エンジニア同士の情報共有
             </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="mx-auto mt-3 max-w-2xl text-base text-slate-200/70">
               日々の開発で得た知見やツールを共有し、コミュニティ全体のスキル向上を図ります
             </p>
           </div>
@@ -101,15 +103,18 @@ export function ActivitiesSection() {
             {sharingTopics.map((topic, index) => {
               const Icon = topic.icon;
               return (
-                <Card key={index} className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-card via-card to-muted/10 group border border-border/20 backdrop-blur-sm">
+                <Card
+                  key={index}
+                  className="group border border-white/10 bg-white/[0.04] text-center shadow-[0_25px_45px_-30px_rgba(14,165,233,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/60 hover:bg-white/[0.07]"
+                >
                   <CardHeader className="pb-4">
-                    <div className={`w-16 h-16 mx-auto ${topic.bg} rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300 border border-white/20`}>
-                      <Icon className={`w-8 h-8 ${topic.color}`} />
+                    <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-white/15 ${topic.bg} transition-transform duration-300 group-hover:scale-105`}>
+                      <Icon className={`h-8 w-8 ${topic.color}`} />
                     </div>
-                    <CardTitle className="text-lg">{topic.title}</CardTitle>
+                    <CardTitle className="text-lg text-white">{topic.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="leading-relaxed">{topic.description}</CardDescription>
+                    <CardDescription className="leading-relaxed text-slate-200/70">{topic.description}</CardDescription>
                   </CardContent>
                 </Card>
               );
@@ -119,11 +124,11 @@ export function ActivitiesSection() {
 
         {/* Events Section */}
         <div>
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
+          <div className="mb-12 text-center">
+            <h3 className="text-2xl font-semibold text-white">
               イベント活動
             </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="mx-auto mt-3 max-w-2xl text-base text-slate-200/70">
               定期的なイベントを通じて、学習と交流の機会を提供します
             </p>
           </div>
@@ -131,45 +136,48 @@ export function ActivitiesSection() {
             {activities.map((activity, index) => {
               const Icon = activity.icon;
               return (
-                <Card key={index} className="overflow-hidden border-0 shadow-xl bg-gradient-to-br from-card via-card to-muted/10 hover:shadow-2xl transition-all duration-500 group border border-border/20 backdrop-blur-sm">
+                <Card
+                  key={index}
+                  className="group overflow-hidden border border-white/10 bg-white/[0.05] shadow-[0_30px_55px_-35px_rgba(76,29,149,0.55)] transition-all duration-500 hover:-translate-y-1.5 hover:border-cyan-300/60 hover:bg-white/[0.08]"
+                >
                   <div className="aspect-video relative overflow-hidden">
                     <ImageWithFallback
                       src={activity.image}
                       alt={activity.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                    
+
                     {/* Floating icon */}
                     <div className="absolute top-6 left-6">
-                      <div className={`w-12 h-12 bg-gradient-to-br ${activity.gradient} backdrop-blur-xl rounded-xl flex items-center justify-center border border-white/30 shadow-xl`}>
-                        <Icon className="w-6 h-6 text-white" />
+                      <div className={`flex h-12 w-12 items-center justify-center rounded-xl border border-white/30 bg-gradient-to-br ${activity.gradient} backdrop-blur-xl shadow-xl`}>
+                        <Icon className="h-6 w-6 text-white" />
                       </div>
                     </div>
-                    
+
                     {/* Coming soon badge for future events */}
                     {activity.title.includes("予定") && (
                       <div className="absolute top-6 right-6">
-                        <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white border-0">
+                        <Badge className="border-0 bg-gradient-to-r from-orange-500 to-red-500 text-white">
                           Coming Soon
                         </Badge>
                       </div>
                     )}
                   </div>
-                  
+
                   <CardHeader className="space-y-3">
-                    <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors">
+                    <CardTitle className="text-lg leading-tight text-white transition-colors group-hover:text-cyan-200">
                       {activity.title}
                     </CardTitle>
-                    <CardDescription className="leading-relaxed text-base">
+                    <CardDescription className="text-base leading-relaxed text-slate-200/70">
                       {activity.description}
                     </CardDescription>
                   </CardHeader>
-                  
+
                   <CardContent className="pt-0">
-                    <div className="flex items-center text-primary hover:text-primary/80 transition-colors cursor-pointer">
+                    <div className="flex items-center cursor-pointer text-cyan-300 transition-colors hover:text-cyan-200">
                       <span className="text-sm font-medium">詳細を見る</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </div>
                   </CardContent>
                 </Card>
