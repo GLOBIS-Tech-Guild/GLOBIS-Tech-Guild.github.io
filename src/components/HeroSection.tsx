@@ -1,6 +1,6 @@
-import { Badge } from "./ui/badge";
-import { Users, Rocket, Sparkles } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Badge } from './ui/badge';
+import { Users, Rocket, Sparkles } from 'lucide-react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function HeroSection() {
   return (
@@ -9,29 +9,34 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-secondary/[0.05]"></div>
       <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-secondary/20 to-secondary/5 rounded-full blur-3xl"></div>
-      
+
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between lg:flex-row lg:gap-16">
           <div className="flex flex-col justify-center space-y-8 text-center lg:text-left lg:w-1/2">
             <div className="space-y-6">
-              <Badge variant="secondary" className="w-fit mx-auto lg:mx-0 px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/30 backdrop-blur-sm">
+              <Badge
+                variant="secondary"
+                className="w-fit mx-auto lg:mx-0 px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/30 backdrop-blur-sm"
+              >
                 <Sparkles className="w-4 h-4 mr-2 text-primary" />
                 エンジニアコミュニティ
               </Badge>
-              
+
               <h1 className="mx-auto max-w-4xl lg:mx-0 text-4xl md:text-6xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-primary via-foreground to-secondary bg-clip-text text-transparent">
-                  MBA × エンジニア<br />
+                  MBA × エンジニア
+                  <br />
                   コミュニティ
                 </span>
               </h1>
-              
+
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground lg:mx-0 leading-relaxed">
-                経営×創造者の情報交換の場。<br />
+                経営×創造者の情報交換の場。
+                <br />
                 最新情報が飛び交うエンジニアコミュニティです。
               </p>
             </div>
-            
+
             <div className="flex items-center justify-center gap-8 lg:justify-start">
               <div className="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 backdrop-blur-sm">
                 <div className="p-2 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg">
@@ -47,12 +52,12 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-          
+
           <div className="lg:w-1/2 mt-12 lg:mt-0">
             <div className="relative">
               {/* Glow effect */}
               <div className="absolute -inset-6 bg-gradient-to-r from-primary/30 via-primary/10 to-secondary/30 rounded-3xl blur-3xl opacity-50"></div>
-              
+
               {/* Main image */}
               <div className="relative">
                 <ImageWithFallback

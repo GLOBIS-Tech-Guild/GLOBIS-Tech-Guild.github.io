@@ -1,7 +1,7 @@
-import { Button } from "./ui/button";
-import { Menu, X } from "lucide-react";
-import { useState, type MouseEvent } from "react";
-import DevelopersGuildIcon from "../assets/DevelopersGuild.svg";
+import { Button } from './ui/button';
+import { Menu, X } from 'lucide-react';
+import { useState, type MouseEvent } from 'react';
+import DevelopersGuildIcon from '../assets/DevelopersGuild.svg';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ export function Header() {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
     setMobileMenuOpen(false); // モバイルメニューを閉じる
@@ -43,8 +43,8 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             {[
-              { href: "#about", label: "About" },
-              { href: "#activities", label: "Activities" }
+              { href: '#about', label: 'About' },
+              { href: '#activities', label: 'Activities' },
             ].map((item) => (
               <a
                 key={item.href}
@@ -59,16 +59,8 @@ export function Header() {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
+            <Button variant="ghost" size="sm" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
@@ -78,8 +70,8 @@ export function Header() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 border-t border-border/40 bg-background/95 backdrop-blur-sm">
               {[
-                { href: "#about", label: "About" },
-                { href: "#activities", label: "Activities" }
+                { href: '#about', label: 'About' },
+                { href: '#activities', label: 'Activities' },
               ].map((item) => (
                 <a
                   key={item.href}

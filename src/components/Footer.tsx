@@ -1,5 +1,5 @@
-import { type MouseEvent } from "react";
-import DevelopersGuildIcon from "../assets/DevelopersGuild.svg";
+import { type MouseEvent } from 'react';
+import DevelopersGuildIcon from '../assets/DevelopersGuild.svg';
 
 export function Footer() {
   const handleSmoothScroll = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -13,7 +13,7 @@ export function Footer() {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   };
@@ -22,7 +22,7 @@ export function Footer() {
     <footer className="border-t border-border/40 bg-gradient-to-b from-muted/20 to-muted/40 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 relative">
         <div className="grid gap-8 md:grid-cols-4">
           <div className="space-y-4">
@@ -39,13 +39,13 @@ export function Footer() {
               MBA × エンジニアのコミュニティ
             </p>
           </div>
-          
+
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">ナビゲーション</h4>
             <ul className="space-y-3 text-sm">
               {[
-                { href: "#about", label: "About" },
-                { href: "#activities", label: "Activities" }
+                { href: '#about', label: 'About' },
+                { href: '#activities', label: 'Activities' },
               ].map((item) => (
                 <li key={item.href}>
                   <a
@@ -59,23 +59,20 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          
+
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">活動内容</h4>
             <ul className="space-y-3 text-sm">
-              {[
-                "LTイベント",
-                "パネルディスカッション", 
-                "ワークショップ",
-                "プロダクト開発"
-              ].map((activity) => (
-                <li key={activity} className="text-muted-foreground">
-                  {activity}
-                </li>
-              ))}
+              {['LTイベント', 'パネルディスカッション', 'ワークショップ', 'プロダクト開発'].map(
+                (activity) => (
+                  <li key={activity} className="text-muted-foreground">
+                    {activity}
+                  </li>
+                )
+              )}
             </ul>
           </div>
-          
+
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">コミュニティ</h4>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -83,7 +80,7 @@ export function Footer() {
             </p>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-8 border-t border-border/30 text-center">
           <p className="text-sm text-muted-foreground">
             © 2025 GLOBIS Tech Guild. All rights reserved.
