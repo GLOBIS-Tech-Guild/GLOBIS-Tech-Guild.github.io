@@ -11,5 +11,5 @@ export function HeroSection() {
         loading="eager"
       />
     </section>
-  );
+  )
 }
