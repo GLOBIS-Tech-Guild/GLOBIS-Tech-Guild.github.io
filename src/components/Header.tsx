@@ -1,27 +1,27 @@
-import { Button } from './ui/button';
-import { Menu, X } from 'lucide-react';
-import { useState, type MouseEvent } from 'react';
-import DevelopersGuildIcon from '../assets/DevelopersGuild.svg';
+import { Button } from './ui/button'
+import { Menu, X } from 'lucide-react'
+import { useState, type MouseEvent } from 'react'
+import DevelopersGuildIcon from '../assets/DevelopersGuild.svg'
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const handleSmoothScroll = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
+    e.preventDefault()
+    const targetId = href.replace('#', '')
+    const element = document.getElementById(targetId)
     if (element) {
-      const headerOffset = 60; // ヘッダーの高さ分のオフセット
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const headerOffset = 60 // ヘッダーの高さ分のオフセット
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth',
-      });
+      })
     }
-    setMobileMenuOpen(false); // モバイルメニューを閉じる
-  };
+    setMobileMenuOpen(false) // モバイルメニューを閉じる
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
@@ -87,5 +87,5 @@ export function Header() {
         )}
       </div>
     </header>
-  );
+  )
 }

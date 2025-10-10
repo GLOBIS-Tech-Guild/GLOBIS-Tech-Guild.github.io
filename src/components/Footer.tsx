@@ -1,22 +1,22 @@
-import { type MouseEvent } from 'react';
-import DevelopersGuildIcon from '../assets/DevelopersGuild.svg';
+import { type MouseEvent } from 'react'
+import DevelopersGuildIcon from '../assets/DevelopersGuild.svg'
 
 export function Footer() {
   const handleSmoothScroll = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
+    e.preventDefault()
+    const targetId = href.replace('#', '')
+    const element = document.getElementById(targetId)
     if (element) {
-      const headerOffset = 60; // ヘッダーの高さ分のオフセット
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const headerOffset = 60 // ヘッダーの高さ分のオフセット
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth',
-      });
+      })
     }
-  };
+  }
 
   return (
     <footer className="border-t border-border/40 bg-gradient-to-b from-muted/20 to-muted/40 relative overflow-hidden">
@@ -88,5 +88,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

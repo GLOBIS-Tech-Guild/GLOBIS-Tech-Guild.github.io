@@ -1,5 +1,5 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Badge } from './ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
+import { Badge } from './ui/badge'
 import {
   Calendar,
   Mic,
@@ -10,8 +10,8 @@ import {
   TrendingUp,
   UserCheck,
   ArrowRight,
-} from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+} from 'lucide-react'
+import { ImageWithFallback } from './figma/ImageWithFallback'
 
 export function ActivitiesSection() {
   const activities = [
@@ -47,7 +47,7 @@ export function ActivitiesSection() {
         'https://images.unsplash.com/photo-1625459201773-9b2386f53ca2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwY29tcHV0ZXIlMjBjb2RlfGVufDF8fHx8MTc1OTI1NDE5M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       gradient: 'from-purple-500/10 to-pink-500/10',
     },
-  ];
+  ]
 
   const sharingTopics = [
     {
@@ -78,7 +78,7 @@ export function ActivitiesSection() {
       color: 'text-orange-600',
       bg: 'bg-orange-500/10',
     },
-  ];
+  ]
 
   return (
     <section id="activities" className="py-24 relative overflow-hidden">
@@ -116,7 +116,7 @@ export function ActivitiesSection() {
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {sharingTopics.map((topic, index) => {
-              const Icon = topic.icon;
+              const Icon = topic.icon
               return (
                 <Card
                   key={index}
@@ -136,7 +136,7 @@ export function ActivitiesSection() {
                     </CardDescription>
                   </CardContent>
                 </Card>
-              );
+              )
             })}
           </div>
         </div>
@@ -153,7 +153,7 @@ export function ActivitiesSection() {
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             {activities.map((activity, index) => {
-              const Icon = activity.icon;
+              const Icon = activity.icon
               return (
                 <Card
                   key={index}
@@ -202,11 +202,11 @@ export function ActivitiesSection() {
                     </div>
                   </CardContent>
                 </Card>
-              );
+              )
             })}
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }

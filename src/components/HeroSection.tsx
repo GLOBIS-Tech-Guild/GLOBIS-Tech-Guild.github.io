@@ -1,6 +1,6 @@
-import { Badge } from './ui/badge';
-import { Users, Rocket, Sparkles } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Badge } from './ui/badge'
+import { Users, Rocket, Sparkles } from 'lucide-react'
+import { ImageWithFallback } from './figma/ImageWithFallback'
 
 export function HeroSection() {
   return (
@@ -71,5 +71,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

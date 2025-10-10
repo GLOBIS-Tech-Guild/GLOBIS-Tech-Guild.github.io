@@ -1,6 +1,6 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Badge } from './ui/badge';
-import { Target, Rocket, Users, MessageSquare } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
+import { Badge } from './ui/badge'
+import { Target, Rocket, Users, MessageSquare } from 'lucide-react'
 
 export function AboutSection() {
   const goals = [
@@ -22,7 +22,7 @@ export function AboutSection() {
       gradient: 'from-emerald-500/10 to-emerald-600/5',
       bg: 'bg-emerald-500/5',
     },
-  ];
+  ]
 
   return (
     <section
@@ -53,7 +53,7 @@ export function AboutSection() {
 
         <div className="grid gap-8 md:grid-cols-2 mb-20">
           {goals.map((goal, index) => {
-            const Icon = goal.icon;
+            const Icon = goal.icon
             return (
               <Card
                 key={index}
@@ -85,7 +85,7 @@ export function AboutSection() {
                   </ul>
                 </CardContent>
               </Card>
-            );
+            )
           })}
         </div>
 
@@ -109,5 +109,5 @@ export function AboutSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

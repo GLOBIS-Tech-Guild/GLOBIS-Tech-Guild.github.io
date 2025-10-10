@@ -61,6 +61,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md,html}\"",
+    "lint:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md,html}\"",
+    "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md,html}\"",
+    "prettier:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md,html}\"",
     "deploy": "npm run build && gh-pages -d build"
   }
 }
