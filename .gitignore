@@ -1,2 +1,4 @@
 node_modules
 build
+figma
+.DS_store
