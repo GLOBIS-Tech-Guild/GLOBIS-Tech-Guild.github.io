@@ -1,4 +1,4 @@
-import { Twitter, Github, Linkedin } from 'lucide-react';
+import { Twitter, Github, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -10,9 +10,11 @@ export default function Footer() {
             <h3 className="text-xl text-white mb-4">GLOBIS Tech Guild</h3>
             <p className="text-gray-400 leading-relaxed mb-4">
               技術者のためのコミュニティプラットフォーム。
+              <br />
               学び、共有し、共に成長する場所です。
             </p>
-            <div className="flex gap-4">
+            {/* TODO: SHS Icon */}
+            {/* <div className="flex gap-4">
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Github className="w-6 h-6" />
               </a>
@@ -22,7 +24,7 @@ export default function Footer() {
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -35,7 +37,10 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#activities" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <a
+                  href="#activities"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
                   活動内容
                 </a>
               </li>
@@ -50,11 +55,9 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-gray-800 text-center">
-          <p className="text-gray-400 text-sm">
-            © 2025 GLOBIS Tech Guild. All rights reserved.
-          </p>
+          <p className="text-gray-400 text-sm">© 2025 GLOBIS Tech Guild. All rights reserved.</p>
         </div>
       </div>
     </footer>
-  );
+  )
 }

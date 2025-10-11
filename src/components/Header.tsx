@@ -1,27 +1,23 @@
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import DevelopersGuildLogo from '../assets/DevelopersGuild.svg';
+import { useState } from 'react'
+import { Menu, X } from 'lucide-react'
+import DevelopersGuildLogo from '../assets/DevelopersGuild.svg'
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { name: "コミュニティ", href: "#about" },
-    { name: "活動内容", href: "#activities" },
-    { name: "イベント", href: "#events" },
-  ];
+    { name: 'コミュニティ', href: '#about' },
+    { name: '活動内容', href: '#activities' },
+    { name: 'イベント', href: '#events' },
+  ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-3">
-            <img
-              src={DevelopersGuildLogo}
-              alt="GLOBIS Tech Guild logo"
-              className="h-8 w-auto"
-            />
+            <img src={DevelopersGuildLogo} alt="GLOBIS Tech Guild logo" className="h-8 w-auto" />
             <div className="flex items-center text-white ml-2">
               <span className="text-xl">GLOBIS</span>
               <span className="text-xl">Tech Guild</span>
@@ -50,10 +46,7 @@ export default function Header() {
           </div> */}
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -83,5 +76,5 @@ export default function Header() {
         )}
       </div>
     </header>
-  );
+  )
 }

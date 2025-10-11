@@ -1,37 +1,38 @@
-import { Wrench, BookOpen, TrendingUp, Users } from 'lucide-react';
+import { Wrench, BookOpen, TrendingUp, Users } from 'lucide-react'
 
 export default function About() {
   const features = [
     {
       icon: Wrench,
-      title: "開発ツール",
-      description: "最新の開発ツールやフレームワークの活用方法を学び、効率的な開発環境を構築します。"
+      title: '開発ツール',
+      description:
+        '最新の開発ツールやフレームワークの活用方法を学び、効率的な開発環境を構築します。',
     },
     {
       icon: BookOpen,
-      title: "開発ノウハウ",
-      description: "実践的なコーディング技術やベストプラクティスを共有し、開発スキルを向上させます。"
+      title: '開発ノウハウ',
+      description:
+        '実践的なコーディング技術やベストプラクティスを共有し、開発スキルを向上させます。',
     },
     {
       icon: TrendingUp,
-      title: "グロースハック",
-      description: "プロダクトの成長戦略やユーザー獲得のための施策を学び、ビジネス視点を養います。"
+      title: 'グロースハック',
+      description: 'プロダクトの成長戦略やユーザー獲得のための施策を学び、ビジネス視点を養います。',
     },
     {
       icon: Users,
-      title: "チームマネジメント",
-      description: "アジャイル開発やチーム運営のノウハウを習得し、効果的なチームビルディングを実現します。"
-    }
-  ];
+      title: 'チームマネジメント',
+      description:
+        'アジャイル開発やチーム運営のノウハウを習得し、効果的なチームビルディングを実現します。',
+    },
+  ]
 
   return (
     <section className="bg-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl text-white mb-6">
-            コミュニティの紹介
-          </h2>
+          <h2 className="text-4xl md:text-5xl text-white mb-6">コミュニティ概要</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             GLOBIS Tech Guildは、技術者の成長とイノベーションを支援する
             <span className="text-cyan-400"> プロフェッショナルコミュニティ</span>です。
@@ -42,7 +43,7 @@ export default function About() {
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={index}
               className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 transform hover:-translate-y-2"
             >
@@ -69,5 +70,5 @@ export default function About() {
         </div> */}
       </div>
     </section>
-  );
+  )
 }
