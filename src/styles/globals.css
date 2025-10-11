@@ -2,88 +2,80 @@
 
 :root {
   --font-size: 16px;
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
-  --text-4xl: 2.25rem;
-  --background: #04191d;
-  --foreground: #e6f5f0;
-  --card: #082429;
-  --card-foreground: #e6f5f0;
-  --popover: #082429;
-  --popover-foreground: #e6f5f0;
-  --primary: #53d3a5;
-  --primary-foreground: #052b29;
-  --secondary: #2445a5;
-  --secondary-foreground: #ecf0ff;
-  --muted: #0e2f35;
-  --muted-foreground: #95c4b8;
-  --accent: #12363b;
-  --accent-foreground: #e6f5f0;
-  --destructive: #f87171;
-  --destructive-foreground: #04191d;
-  --border: #16474d;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
   --input: transparent;
-  --input-background: #0d2d33;
-  --switch-background: #1e4f57;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #53d3a5;
-  --chart-1: #53d3a5;
-  --chart-2: #2445a5;
-  --chart-3: #86a0a5;
-  --chart-4: #b7e6c9;
-  --chart-5: #e9893d;
-  --radius: 0.75rem;
-  --sidebar: #082429;
-  --sidebar-foreground: #e6f5f0;
-  --sidebar-primary: #53d3a5;
-  --sidebar-primary-foreground: #052b29;
-  --sidebar-accent: #0e2f35;
-  --sidebar-accent-foreground: #e6f5f0;
-  --sidebar-border: #16474d;
-  --sidebar-ring: #53d3a5;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-  --background: #020f11;
-  --foreground: #d4f0e8;
-  --card: #04181b;
-  --card-foreground: #d4f0e8;
-  --popover: #04181b;
-  --popover-foreground: #d4f0e8;
-  --primary: #4cc89b;
-  --primary-foreground: #04181b;
-  --secondary: #1d3b8f;
-  --secondary-foreground: #d4def8;
-  --muted: #082227;
-  --muted-foreground: #7fb2a8;
-  --accent: #0a2b30;
-  --accent-foreground: #d4f0e8;
-  --destructive: #f87171;
-  --destructive-foreground: #04181b;
-  --border: #10363b;
-  --input: #10363b;
-  --ring: #4cc89b;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --chart-1: #4cc89b;
-  --chart-2: #1d3b8f;
-  --chart-3: #6e8e95;
-  --chart-4: #9fd6bb;
-  --chart-5: #e9893d;
-  --sidebar: #04181b;
-  --sidebar-foreground: #d4f0e8;
-  --sidebar-primary: #4cc89b;
-  --sidebar-primary-foreground: #04181b;
-  --sidebar-accent: #082227;
-  --sidebar-accent-foreground: #d4f0e8;
-  --sidebar-border: #10363b;
-  --sidebar-ring: #4cc89b;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
 }
 
 @theme inline {
@@ -141,7 +133,7 @@
  * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
  */
 @layer base {
-  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
     h1 {
       font-size: var(--text-2xl);
       font-weight: var(--font-weight-medium);
