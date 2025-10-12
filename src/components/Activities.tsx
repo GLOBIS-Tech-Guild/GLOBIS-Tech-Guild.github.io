@@ -7,7 +7,8 @@ export default function Activities() {
     {
       icon: Presentation,
       title: 'LTイベント',
-      description: '技術トピックを5〜10分で共有するライトニングトーク',
+      description:
+        '知見や技術ネタを5~10分でシェアするライトニングトークイベント。多様なトピックに触れ新たな発見を促す発表会です。',
       image:
         'https://images.unsplash.com/photo-1733412505442-36cfa59a4240?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGNvZGUlMjBkYXJrJTIwc2NyZWVufGVufDF8fHx8MTc1OTkxNDcyMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       date: '毎月第2金曜日',
@@ -16,7 +17,8 @@ export default function Activities() {
     {
       icon: BookOpen,
       title: '技術勉強会',
-      description: '最新技術のトレンドを学ぶ定期的な勉強会',
+      description:
+        '一つのテーマを深く探求する参加型の勉強会。最新技術の動向や理論を、議論を交えながら学び合います。',
       image:
         'https://images.unsplash.com/photo-1758523669926-048be897285e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwY29tbXVuaXR5JTIwbWVldGluZ3xlbnwxfHx8fDE3NTk5MTQ3MjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       date: '毎月第3土曜日',
@@ -25,7 +27,8 @@ export default function Activities() {
     {
       icon: Coffee,
       title: '交流会',
-      description: 'カジュアルなネットワーキングと情報交換の場',
+      description:
+        'コーヒーを片手に、技術やキャリアについて語り合う場。偶然の出会いや新しいアイデアを生み出します。',
       image:
         'https://images.unsplash.com/photo-1646579886741-12b59840c63f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwd29ya3Nob3AlMjBjb2xsYWJvcmF0aW9ufGVufDF8fHx8MTc1OTkxNDcyOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       date: '随時開催',
@@ -34,7 +37,8 @@ export default function Activities() {
     {
       icon: Rocket,
       title: 'プロダクト開発',
-      description: 'チームでプロダクトを企画・開発する実践プロジェクト',
+      description:
+        'アイデアを形にする、チームでの実践開発プロジェクト。企画からリリースまで、一連の流れを一気通貫で実施します。',
       image:
         'https://images.unsplash.com/photo-1733412505442-36cfa59a4240?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGNvZGUlMjBkYXJrJTIwc2NyZWVufGVufDF8fHx8MTc1OTkxNDcyMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       date: '3ヶ月プロジェクト',
@@ -58,8 +62,10 @@ export default function Activities() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl text-white mb-6">活動内容</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            多様な学習機会と実践的な体験を通じて、
-            <span className="text-cyan-400"> 技術力とネットワーク</span>を同時に構築できます。
+            開発・グロース・チーム運営を軸に、
+            <span className="text-cyan-400">参加者同士が実践的な知見を交換し</span>
+            <br />
+            共に成長を目指す活動を行います。
           </p>
         </div>
 
