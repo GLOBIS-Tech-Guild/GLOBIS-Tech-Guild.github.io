@@ -1,9 +1,10 @@
 import { ImageWithFallback } from './figma/ImageWithFallback'
-import { Calendar, Users, Presentation, BookOpen, Coffee, Rocket } from 'lucide-react'
+import { Presentation, BookOpen, Coffee, Rocket } from 'lucide-react'
 import techBackground from '../assets/tech.png'
 import meetingImage from '../assets/meeting.png'
 import presentationImage from '../assets/presentation.png'
 import sessionImage from '../assets/session.png'
+import codingImage from '../assets/coding.jpeg'
 
 export default function Activities() {
   const activities = [
@@ -39,8 +40,7 @@ export default function Activities() {
       title: 'プロダクト開発',
       description:
         'アイデアを形にする、チームでの実践開発プロジェクト。企画からリリースまで、一連の流れを一気通貫で実施します。',
-      image:
-        'https://images.unsplash.com/photo-1733412505442-36cfa59a4240?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGNvZGUlMjBkYXJrJTIwc2NyZWVufGVufDF8fHx8MTc1OTkxNDcyMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: codingImage,
       date: '3ヶ月プロジェクト',
       participants: '5-10名',
     },

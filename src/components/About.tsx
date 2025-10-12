@@ -48,10 +48,10 @@ export default function About() {
               key={index}
               className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 transform hover:-translate-y-2"
             >
-              <div className="w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-6 mx-auto">
                 <feature.icon className="w-8 h-8 text-cyan-400" />
               </div>
-              <h3 className="text-xl text-white mb-4">{feature.title}</h3>
+              <h3 className="text-xl text-white mb-4 text-center">{feature.title}</h3>
               <p className="text-gray-300 leading-relaxed">{feature.description}</p>
             </div>
           ))}
