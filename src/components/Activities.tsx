@@ -1,6 +1,9 @@
 import { ImageWithFallback } from './figma/ImageWithFallback'
 import { Calendar, Users, Presentation, BookOpen, Coffee, Rocket } from 'lucide-react'
 import techBackground from '../assets/tech.png'
+import meetingImage from '../assets/meeting.png'
+import presentationImage from '../assets/presentation.png'
+import sessionImage from '../assets/session.png'
 
 export default function Activities() {
   const activities = [
@@ -9,8 +12,7 @@ export default function Activities() {
       title: 'LTイベント',
       description:
         '知見や技術ネタを5~10分でシェアするライトニングトークイベント。多様なトピックに触れ新たな発見を促す発表会です。',
-      image:
-        'https://images.unsplash.com/photo-1733412505442-36cfa59a4240?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGNvZGUlMjBkYXJrJTIwc2NyZWVufGVufDF8fHx8MTc1OTkxNDcyMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: presentationImage,
       date: '毎月第2金曜日',
       participants: '30-50名',
     },
@@ -19,8 +21,7 @@ export default function Activities() {
       title: '技術勉強会',
       description:
         '一つのテーマを深く探求する参加型の勉強会。最新技術の動向や理論を、議論を交えながら学び合います。',
-      image:
-        'https://images.unsplash.com/photo-1758523669926-048be897285e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwY29tbXVuaXR5JTIwbWVldGluZ3xlbnwxfHx8fDE3NTk5MTQ3MjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: sessionImage,
       date: '毎月第3土曜日',
       participants: '20-40名',
     },
@@ -29,8 +30,7 @@ export default function Activities() {
       title: '交流会',
       description:
         'コーヒーを片手に、技術やキャリアについて語り合う場。偶然の出会いや新しいアイデアを生み出します。',
-      image:
-        'https://images.unsplash.com/photo-1646579886741-12b59840c63f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwd29ya3Nob3AlMjBjb2xsYWJvcmF0aW9ufGVufDF8fHx8MTc1OTkxNDcyOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: meetingImage,
       date: '随時開催',
       participants: '15-30名',
     },
@@ -84,11 +84,11 @@ export default function Activities() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
-                <div className="absolute top-4 left-4">
+                {/* <div className="absolute top-4 left-4">
                   <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
                     <activity.icon className="w-6 h-6 text-cyan-400" />
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* Content */}

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import DevelopersGuildLogo from '../assets/DevelopersGuild.svg'
+import GlobisTechGuildSVG from '../assets/globis_tech_guild.svg'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,7 +17,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-3">
-            <img src={DevelopersGuildLogo} alt="GLOBIS Tech Guild logo" className="h-8 w-auto" />
+            <img src={GlobisTechGuildSVG} alt="GLOBIS Tech Guild logo" className="h-8 w-auto" />
             <div className="flex items-center text-white ml-2">
               <span className="text-xl">GLOBIS</span>
               <span className="text-xl">Tech Guild</span>
