@@ -1,7 +1,6 @@
 import { ImageWithFallback } from './figma/ImageWithFallback'
 import { Calendar, Users, Presentation, BookOpen, Coffee, Rocket } from 'lucide-react'
 import techBackground from '../assets/tech.png'
-import codingImage from '../assets/coding.png'
 
 export default function Activities() {
   const activities = [

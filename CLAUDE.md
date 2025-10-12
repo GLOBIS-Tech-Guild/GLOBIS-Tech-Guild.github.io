@@ -31,6 +31,7 @@ npm run prettier:fix  # Alias for lint:fix
 ## Architecture & Structure
 
 ### Component Organization
+
 - **Entry Point**: `src/main.tsx` → mounts `App.tsx` to `#root`
 - **Page Layout**: `App.tsx` orchestrates the single-page structure:
   - Header → HeroSection → AboutSection → ActivitiesSection → Footer
@@ -39,18 +40,21 @@ npm run prettier:fix  # Alias for lint:fix
 - **Figma Integration**: `src/components/figma/` provides image fallback utilities
 
 ### Styling System
+
 - **Tailwind CSS v4**: Uses new layer syntax (`@layer`, `@theme`, `@custom-variant`)
 - **Design Tokens**: Centralized in `src/styles/globals.css` with CSS custom properties
 - **Theming**: Dark mode support via CSS variables, managed through Tailwind utilities
 - **Component Variants**: Powered by `class-variance-authority` (CVA) for type-safe styling
 
 ### Build Configuration
+
 - **Vite Setup**: Uses `@vitejs/plugin-react-swc` for optimal React 18 + JSX performance
 - **Dependency Pinning**: `vite.config.ts` contains 30+ version-specific aliases for Radix UI stability
 - **TypeScript**: Strict mode enabled with bundler module resolution
 - **Output**: Production builds to `build/` directory (not `dist/`)
 
 ### CI/CD Pipeline
+
 - **GitHub Actions Workflows**:
   - `ci.yml`: Runs on PRs to main/develop - checks formatting and build
   - `deploy.yml`: Auto-deploys main branch to GitHub Pages with Slack notifications

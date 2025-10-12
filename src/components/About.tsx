@@ -6,24 +6,25 @@ export default function About() {
       icon: Wrench,
       title: '開発ツール',
       description:
-        '最新の開発ツールやフレームワークの活用方法を学び、効率的な開発環境を構築します。',
+        '最新AIツールやフレームワークの活用事例を交換し、エンジニア同士の開発効率を高め合う場です。',
     },
     {
       icon: BookOpen,
       title: '開発ノウハウ',
       description:
-        '実践的なコーディング技術やベストプラクティスを共有し、開発スキルを向上させます。',
+        '現場で役立つコーディング技術や設計思想を共有し、実践的な開発スキルを共に向上させます。',
     },
     {
       icon: TrendingUp,
       title: 'グロースハック',
-      description: 'プロダクトの成長戦略やユーザー獲得のための施策を学び、ビジネス視点を養います。',
+      description:
+        'プロダクトの成長戦略やユーザー獲得施策について議論し、成功と失敗の体験を分かち合います。',
     },
     {
       icon: Users,
       title: 'チームマネジメント',
       description:
-        'アジャイル開発やチーム運営のノウハウを習得し、効果的なチームビルディングを実現します。',
+        '効果的なチーム運営の工夫やアジャイル開発の実践例を持ち寄り、より良い開発体制を探求します。',
     },
   ]
 
@@ -34,9 +35,9 @@ export default function About() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl text-white mb-6">コミュニティ概要</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            GLOBIS Tech Guildは、技術者の成長とイノベーションを支援する
-            <span className="text-cyan-400"> プロフェッショナルコミュニティ</span>です。
-            共に学び、共に成長し、テクノロジーの未来を創造しましょう。
+            MBA×エンジニアが集い <span className="text-cyan-400">AI時代の最先端技術をシェア</span>
+            するコミュニティです。
+            <br /> 共に学び、共に成長し、新たな価値を創造しましょう。
           </p>
         </div>
 

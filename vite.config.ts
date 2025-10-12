@@ -45,7 +45,10 @@ export default defineConfig({
       '@radix-ui/react-aspect-ratio@1.1.2': '@radix-ui/react-aspect-ratio',
       '@radix-ui/react-alert-dialog@1.1.6': '@radix-ui/react-alert-dialog',
       '@radix-ui/react-accordion@1.2.3': '@radix-ui/react-accordion',
-      'figma:asset/35e8cac37cb6a4f4acd2126ba1631c8f69feeda2.png': path.resolve(__dirname, './src/assets/35e8cac37cb6a4f4acd2126ba1631c8f69feeda2.png'),
+      'figma:asset/35e8cac37cb6a4f4acd2126ba1631c8f69feeda2.png': path.resolve(
+        __dirname,
+        './src/assets/35e8cac37cb6a4f4acd2126ba1631c8f69feeda2.png'
+      ),
       '@': path.resolve(__dirname, './src'),
     },
   },
