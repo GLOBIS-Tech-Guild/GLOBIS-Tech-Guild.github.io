@@ -1,5 +1,4 @@
 import { ImageWithFallback } from './figma/ImageWithFallback'
-import { Presentation, BookOpen, Coffee, Rocket } from 'lucide-react'
 import techBackground from '../assets/tech.png'
 import meetingImage from '../assets/meeting.png'
 import presentationImage from '../assets/presentation.png'
@@ -9,40 +8,28 @@ import codingImage from '../assets/coding.jpeg'
 export default function Activities() {
   const activities = [
     {
-      icon: Presentation,
       title: 'LTイベント',
       description:
         '知見や技術ネタを5~10分でシェアするライトニングトークイベント。多様なトピックに触れ新たな発見を促す発表会です。',
       image: presentationImage,
-      date: '毎月第2金曜日',
-      participants: '30-50名',
     },
     {
-      icon: BookOpen,
       title: '技術勉強会',
       description:
         '一つのテーマを深く探求する参加型の勉強会。最新技術の動向や理論を、議論を交えながら学び合います。',
       image: sessionImage,
-      date: '毎月第3土曜日',
-      participants: '20-40名',
     },
     {
-      icon: Coffee,
       title: '交流会',
       description:
         'コーヒーを片手に、技術やキャリアについて語り合う場。偶然の出会いや新しいアイデアを生み出します。',
       image: meetingImage,
-      date: '随時開催',
-      participants: '15-30名',
     },
     {
-      icon: Rocket,
       title: 'プロダクト開発',
       description:
         'アイデアを形にする、チームでの実践開発プロジェクト。企画からリリースまで、一連の流れを一気通貫で実施します。',
       image: codingImage,
-      date: '3ヶ月プロジェクト',
-      participants: '5-10名',
     },
   ]
 
