@@ -1,5 +1,3 @@
-import { Twitter, Github, Linkedin } from 'lucide-react'
-
 export default function Footer() {
   return (
     <footer className="bg-gray-900 border-t border-gray-800">
