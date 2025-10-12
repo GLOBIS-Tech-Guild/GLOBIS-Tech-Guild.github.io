@@ -96,7 +96,8 @@ export default function Activities() {
                 <h3 className="text-2xl text-white mb-3">{activity.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{activity.description}</p>
 
-                <div className="flex items-center justify-between text-sm text-gray-400">
+                {/* TODO: 日時 / 参加人数 */}
+                {/* <div className="flex items-center justify-between text-sm text-gray-400">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
                     <span>{activity.date}</span>
@@ -105,7 +106,7 @@ export default function Activities() {
                     <Users className="w-4 h-4" />
                     <span>{activity.participants}</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
