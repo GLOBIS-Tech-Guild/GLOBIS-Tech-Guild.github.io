@@ -1,1 +1,0 @@
-git config commit.template .commit/.commit_template

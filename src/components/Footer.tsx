@@ -1,90 +1,59 @@
-import { type MouseEvent } from 'react'
-import DevelopersGuildIcon from '../assets/DevelopersGuild.svg'
-
-export function Footer() {
-  const handleSmoothScroll = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault()
-    const targetId = href.replace('#', '')
-    const element = document.getElementById(targetId)
-    if (element) {
-      const headerOffset = 60 // ヘッダーの高さ分のオフセット
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      })
-    }
-  }
-
+export default function Footer() {
   return (
-    <footer className="border-t border-border/40 bg-gradient-to-b from-muted/20 to-muted/40 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 relative">
-        <div className="grid gap-8 md:grid-cols-4">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="relative">
-                <img src={DevelopersGuildIcon} alt="GLOBIS Tech Guild" className="h-7 w-7" />
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur opacity-75"></div>
-              </div>
-              <span className="font-semibold text-lg bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
-                GLOBIS Tech Guild
-              </span>
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              MBA × エンジニアのコミュニティ
+    <footer className="bg-gray-900 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          {/* About */}
+          <div className="md:col-span-2">
+            <h3 className="text-xl text-white mb-4">GLOBIS Tech Guild</h3>
+            <p className="text-gray-400 leading-relaxed mb-4">
+              技術者のためのコミュニティプラットフォーム。
+              <br />
+              学び、共有し、共に成長する場所です。
             </p>
+            {/* TODO: SHS Icon */}
+            {/* <div className="flex gap-4">
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <Github className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <Twitter className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <Linkedin className="w-6 h-6" />
+              </a>
+            </div> */}
           </div>
 
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">ナビゲーション</h4>
-            <ul className="space-y-3 text-sm">
-              {[
-                { href: '#about', label: 'About' },
-                { href: '#activities', label: 'Activities' },
-              ].map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    onClick={(e) => handleSmoothScroll(e, item.href)}
-                    className="text-muted-foreground hover:text-primary transition-all duration-200 hover:translate-x-1 inline-block cursor-pointer"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-white mb-4">クイックリンク</h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="#about" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  コミュニティ
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#activities"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  活動内容
+                </a>
+              </li>
+              <li>
+                <a href="#events" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  イベント
+                </a>
+              </li>
             </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">活動内容</h4>
-            <ul className="space-y-3 text-sm">
-              {['LTイベント', 'パネルディスカッション', 'ワークショップ', 'プロダクト開発'].map(
-                (activity) => (
-                  <li key={activity} className="text-muted-foreground">
-                    {activity}
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">コミュニティ</h4>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              経営視点を持つエンジニアが集まり、共に成長するコミュニティです。
-            </p>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border/30 text-center">
-          <p className="text-sm text-muted-foreground">
-            © 2025 GLOBIS Tech Guild. All rights reserved.
-          </p>
+        {/* Bottom */}
+        <div className="pt-8 border-t border-gray-800 text-center">
+          <p className="text-gray-400 text-sm">© 2025 GLOBIS Tech Guild. All rights reserved.</p>
         </div>
       </div>
     </footer>
