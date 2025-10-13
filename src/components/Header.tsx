@@ -1,99 +1,80 @@
-import { Button } from "./ui/button";
-import { Menu, X } from "lucide-react";
-import { useState, type MouseEvent } from "react";
-import DevelopersGuildIcon from "../assets/DevelopersGuild.svg";
+import { useState } from 'react'
+import { Menu, X } from 'lucide-react'
+import GlobisTechGuildSVG from '../assets/globis_tech_guild.svg'
 
-export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const handleSmoothScroll = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
-    if (element) {
-      const headerOffset = 60; // ヘッダーの高さ分のオフセット
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-    setMobileMenuOpen(false); // モバイルメニューを閉じる
-  };
+  const navItems = [
+    { name: 'コミュニティ', href: '#about' },
+    { name: '活動内容', href: '#activities' },
+    { name: 'イベント', href: '#events' },
+  ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900 backdrop-blur-md border-b border-gray-800">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <a className="flex items-center space-x-3" href="/">
-              <div className="relative">
-                <img src={DevelopersGuildIcon} alt="GLOBIS Tech Guild" className="h-8 w-8" />
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur opacity-75"></div>
-              </div>
-              <span className="font-semibold text-lg bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
-                GLOBIS Tech Guild
-              </span>
-            </a>
-          </div>
+          <a href="/" className="flex items-center space-x-3">
+            <img src={GlobisTechGuildSVG} alt="GLOBIS Tech Guild logo" className="h-8 w-auto" />
+            <div className="flex items-center text-white ml-2">
+              <span className="text-xl">GLOBIS</span>
+              <span className="text-xl">Tech Guild</span>
+            </div>
+          </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
-            {[
-              { href: "#about", label: "About" },
-              { href: "#activities", label: "Activities" }
-            ].map((item) => (
+          <nav className="hidden md:flex items-center space-x-8">
+            {navItems.map((item, index) => (
               <a
-                key={item.href}
+                key={index}
                 href={item.href}
-                onClick={(e) => handleSmoothScroll(e, item.href)}
-                className="px-4 py-2 rounded-lg text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 transition-all duration-200 cursor-pointer"
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
               >
-                {item.label}
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </nav>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
-            </Button>
-          </div>
+          {/* TODO: CTA Button */}
+          {/* <div className="hidden md:flex items-center space-x-4">
+            <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105">
+              参加する
+            </button>
+          </div> */}
+
+          {/* Mobile Menu Button */}
+          <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
-        {mobileMenuOpen && (
+        {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 border-t border-border/40 bg-background/95 backdrop-blur-sm">
-              {[
-                { href: "#about", label: "About" },
-                { href: "#activities", label: "Activities" }
-              ].map((item) => (
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900 rounded-lg mt-2">
+              {navItems.map((item, index) => (
                 <a
-                  key={item.href}
+                  key={index}
                   href={item.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-foreground/70 hover:text-foreground hover:bg-accent/50 transition-colors cursor-pointer"
-                  onClick={(e) => handleSmoothScroll(e, item.href)}
+                  className="block text-gray-300 hover:text-cyan-400 px-3 py-2 transition-colors duration-300"
+                  onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.label}
+                  {item.name}
                 </a>
               ))}
+              {/* TODO: CTA Button */}
+              {/* <div className="px-3 py-2">
+                <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-2 rounded-lg transition-all duration-300">
+                  参加する
+                </button>
+              </div> */}
             </div>
           </div>
         )}
       </div>
     </header>
-  );
+  )
 }
