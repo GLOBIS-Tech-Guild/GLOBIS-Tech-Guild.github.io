@@ -59,13 +59,13 @@ export default function About() {
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-cyan-500 to-blue-600 p-8 rounded-2xl">
+          <div className="bg-gray-800 border border-gray-700 p-8 rounded-2xl">
             <h3 className="text-3xl text-white mb-4">参加フォームはこちら</h3>
             <a
               href="https://forms.gle/LVswXtmsGBQZnrw99"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-white hover:bg-gray-100 text-gray-700 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105"
+              className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               メンバー登録
             </a>
