@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Activities from './components/Activities'
 import Events from './components/Events'
+import Committee from './components/Committee'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -21,6 +22,9 @@ export default function App() {
         </section>
         <section id="events">
           <Events />
+        </section>
+        <section id="committee">
+          <Committee />
         </section>
       </main>
       <Footer />
