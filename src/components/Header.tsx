@@ -9,6 +9,7 @@ export default function Header() {
     { name: 'コミュニティ', href: '#about' },
     { name: '活動内容', href: '#activities' },
     { name: 'イベント', href: '#events' },
+    { name: 'お問い合わせ', href: '#contact' },
   ]
 
   return (
