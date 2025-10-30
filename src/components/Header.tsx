@@ -18,7 +18,7 @@ export default function Header() {
           {/* Logo */}
           <a href="/" className="flex items-center space-x-3">
             <img src={GlobisTechGuildSVG} alt="GLOBIS Tech Guild logo" className="h-8 w-auto" />
-            <div className="flex items-center text-white ml-2">
+            <div className="flex items-center gap-2 text-white ml-2">
               <span className="text-xl">GLOBIS</span>
               <span className="text-xl">Tech Guild</span>
             </div>
@@ -36,14 +36,18 @@ export default function Header() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
+            {/* CTA Button */}
+            <div className="hidden md:flex items-center space-x-4">
+              <a
+                href="https://forms.gle/LVswXtmsGBQZnrw99"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                メンバー登録
+              </a>
+            </div>
           </nav>
-
-          {/* TODO: CTA Button */}
-          {/* <div className="hidden md:flex items-center space-x-4">
-            <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105">
-              参加する
-            </button>
-          </div> */}
 
           {/* Mobile Menu Button */}
           <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -65,12 +69,17 @@ export default function Header() {
                   {item.name}
                 </a>
               ))}
-              {/* TODO: CTA Button */}
-              {/* <div className="px-3 py-2">
-                <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-2 rounded-lg transition-all duration-300">
-                  参加する
-                </button>
-              </div> */}
+              {/* CTA Button */}
+              <div className="px-3 py-2">
+                <a
+                  href="https://forms.gle/LVswXtmsGBQZnrw99"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-cyan-500 hover:bg-cyan-600 text-white py-2 rounded-lg transition-all duration-300 text-center"
+                >
+                  メンバー登録
+                </a>
+              </div>
             </div>
           </div>
         )}
