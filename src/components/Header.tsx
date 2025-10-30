@@ -18,7 +18,7 @@ export default function Header() {
           {/* Logo */}
           <a href="/" className="flex items-center space-x-3">
             <img src={GlobisTechGuildSVG} alt="GLOBIS Tech Guild logo" className="h-8 w-auto" />
-            <div className="flex items-center text-white ml-2">
+            <div className="flex items-center gap-2 text-white ml-2">
               <span className="text-xl">GLOBIS</span>
               <span className="text-xl">Tech Guild</span>
             </div>
