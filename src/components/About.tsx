@@ -57,18 +57,20 @@ export default function About() {
           ))}
         </div>
 
-        {/* TODO: CTA Section */}
-        {/* <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-cyan-500 to-blue-600 p-8 rounded-2xl">
-            <h3 className="text-3xl text-white mb-4">今すぐ参加しませんか？</h3>
-            <p className="text-cyan-100 mb-6 text-lg">
-              技術者としての次のステップを踏み出しましょう
-            </p>
-            <button className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-gray-800 border border-gray-700 p-8 rounded-2xl">
+            <h3 className="text-3xl text-white mb-4">参加フォームはこちら</h3>
+            <a
+              href="https://forms.gle/LVswXtmsGBQZnrw99"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
               メンバー登録
-            </button>
+            </a>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   )
