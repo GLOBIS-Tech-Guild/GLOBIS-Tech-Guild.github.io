@@ -5,9 +5,9 @@ export default function Events() {
     {
       date: '2025.11.※※',
       time: '※※:※※-※※:※※',
-      title: 'プログラミングの価値と生存戦略',
-      description: 'AIが台頭してきた今、エンジニアとしての価値と生存戦略について議論します',
-      location: 'オンライン',
+      title: '※ 企画中',
+      description: '※ 企画中',
+      location: '※ 企画中',
       attendees: 45,
       status: '企画中',
       tags: ['AI', 'エンジニアリング', '生存戦略'],
